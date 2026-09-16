@@ -1,4 +1,5 @@
-# Huffman-Coding
+# EX-11 - Huffman-Coding
+
 ## Aim
 To implement Huffman coding to compress the data using Python.
 
@@ -6,42 +7,40 @@ To implement Huffman coding to compress the data using Python.
 1. Anaconda - Python 3.7
 
 ## Algorithm:
-Step1:
+### Step1:
 Get the input string.
 
-Step2:
+
+### Step2:
 Create tree nodes.
 
-Step3:
+### Step3:
 Main function to implement huffman coding.
 
-Step4:
+### Step4:
 calculate frequency of occurence.
 
-Step5:
+### Step5:
 print the characters and its huffmancode.
 
  
 ## Program:
 
 ``` Python
-# Get the input String
-input_string = "UDHAYA"
+# expt-11-huffman coding
 
-# Calculate frequency of each character in the input string
+# Step 1: Get the input string
+input_string = "RAVI"  # Example input string
+# Step 2: Calculate frequency of each character in the input string
 frequency = {}
 for char in input_string:
     if char in frequency:
         frequency[char] += 1
     else:
         frequency[char] = 1
-# Create tree nodes
-#  Create tree nodes
+# Step 3: Create tree nodes
 nodes = [[char, freq] for char, freq in frequency.items()]
-
-
-# Main function to implement huffman coding
-
+# Step 4: Main function to implement Huffman coding
 while len(nodes) > 1:
     # Sort nodes based on frequency
     nodes = sorted(nodes, key=lambda x: x[1])
@@ -56,10 +55,7 @@ while len(nodes) > 1:
 
 # The final node is the Huffman tree
 huffman_tree = nodes[0]
-
-
-# Calculate frequency of occurrence
-
+# Step 5: Generate Huffman codes
 huffman_codes = {}
 
 def generate_codes(tree, code=""):
@@ -70,19 +66,15 @@ def generate_codes(tree, code=""):
         generate_codes(tree[0][1], code + "1")
 
 generate_codes(huffman_tree)
-# Print the characters and its huffmancode
+# Step 6: Print the characters and their Huffman codes
 print("Character | Huffman Code")
 print("-------------------------")
 for char, code in huffman_codes.items():
     print(f"    {char}    |    {code}")
-
-
-
 ```
 ## Output:
-<img width="971" height="666" alt="Screenshot 2026-08-21 085928" src="https://github.com/user-attachments/assets/1956050b-1d9d-4b63-b7ab-25b3704d81a8" />
 
-
+<img width="268" height="184" alt="image" src="https://github.com/user-attachments/assets/fb4583bf-a08f-4c12-9c96-3fd83477f67e" />
 
 
 ## Result
