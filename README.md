@@ -38,7 +38,7 @@ Generate Huffman codes by assigning 0 to the left branch and 1 to the right bran
 ```py
 
 # Step 1: Get the input string
-input_string = "Tamizhselvan B"  # Example input string
+input_string = "Jeevan Vishal.G.D"  # Example input string
 
 # Step 2: Calculate frequency of each character in the input string
 frequency = {}
@@ -101,4 +101,4 @@ for char, code in huffman_codes.items():
 
 
 # Result :
- The Huffman Coding algorithm was successfully implemented, and Huffman codes were generated for the characters in “Tamizhselvan B”.
+ The Huffman Coding algorithm was successfully implemented, and Huffman codes were generated for the characters in “Jeevan Vishal.G.D”.
